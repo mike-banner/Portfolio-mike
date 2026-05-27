@@ -262,9 +262,9 @@ import pluginImg from '../assets/images/project-plugin.png';
 </script>
 
 <style>
-  /* Base Styles */
+  /* --- 1. Base Mobile-First Styles (< 768px) --- */
   .section {
-    padding: 6rem 2rem;
+    padding: 4rem 1.25rem;
     max-width: 1100px;
     margin: 0 auto;
   }
@@ -272,8 +272,8 @@ import pluginImg from '../assets/images/project-plugin.png';
   .bg-darker {
     background-color: var(--bg-darker);
     max-width: 100%;
-    padding-left: calc((100% - 1100px) / 2 + 2rem);
-    padding-right: calc((100% - 1100px) / 2 + 2rem);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   /* Header / Nav */
@@ -295,7 +295,7 @@ import pluginImg from '../assets/images/project-plugin.png';
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 1.25rem 2rem;
+    padding: 1rem 1.25rem;
   }
 
   .logo {
@@ -310,21 +310,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-  }
-
-  .nav-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--text-primary);
+    display: none; /* Caché sur mobile */
   }
 
   /* Hero Section */
@@ -333,7 +319,7 @@ import pluginImg from '../assets/images/project-plugin.png';
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 8rem 2rem 4rem 2rem;
+    padding: 7rem 1.25rem 3rem 1.25rem;
     background: radial-gradient(circle at top right, rgba(234, 75, 113, 0.12), transparent 45%),
                 radial-gradient(circle at bottom left, rgba(255, 109, 90, 0.12), transparent 45%);
   }
@@ -343,9 +329,8 @@ import pluginImg from '../assets/images/project-plugin.png';
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 4rem 3rem;
-    max-width: 800px;
+    border-radius: 20px;
+    padding: 2.5rem 1.25rem;
     width: 100%;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     text-align: center;
@@ -361,23 +346,25 @@ import pluginImg from '../assets/images/project-plugin.png';
     border-radius: 9999px;
     font-size: 0.8rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: -0.025em;
     margin-bottom: 0.5rem;
     color: #fff;
+    line-height: 1.1;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    line-height: 1.3;
   }
 
   .gradient-text {
@@ -388,26 +375,26 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .hero-desc {
     color: var(--text-primary);
-    font-size: 1.15rem;
-    line-height: 1.75;
-    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
   }
 
   .hero-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem;
-    margin-bottom: 2.5rem;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   .tag {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    padding: 0.5rem 1rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
     font-weight: 500;
     transition: all 0.3s ease;
   }
@@ -421,16 +408,18 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .actions {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .btn {
-    display: inline-block;
+    display: block;
+    width: 100%;
     padding: 0.85rem 2rem;
     border-radius: 12px;
     font-weight: 600;
     text-decoration: none;
+    text-align: center;
     transition: all 0.3s ease;
     border: 1px solid transparent;
     cursor: pointer;
@@ -468,11 +457,11 @@ import pluginImg from '../assets/images/project-plugin.png';
   /* Section Headers */
   .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .section-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -480,7 +469,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .section-title {
-    font-size: 2.25rem;
+    font-size: 1.85rem;
     font-weight: 800;
     margin-top: 0.5rem;
     color: #fff;
@@ -488,23 +477,23 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .divider {
     height: 4px;
-    width: 60px;
+    width: 50px;
     background: linear-gradient(90deg, var(--accent-orange), var(--accent));
-    margin: 1.25rem auto 0 auto;
+    margin: 1rem auto 0 auto;
     border-radius: 9999px;
   }
 
   /* Projects Section */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -512,14 +501,14 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     border-color: rgba(234, 75, 113, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   }
 
   .project-image-wrapper {
     width: 100%;
-    height: 220px;
+    height: 180px;
     overflow: hidden;
     position: relative;
     border-bottom: 1px solid var(--border-color);
@@ -537,74 +526,74 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .project-content {
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
   }
 
   .project-category {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--accent-orange);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .project-card h3 {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     color: #fff;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-weight: 700;
   }
 
   .project-card p {
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
     flex-grow: 1;
   }
 
   .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
     margin-top: auto;
   }
 
   .project-tags span {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: var(--text-primary);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
-    padding: 0.25rem 0.75rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 9999px;
   }
 
   /* Skills Section */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .skill-category-card {
     background: rgba(23, 27, 38, 0.25);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 2.5rem;
+    border-radius: 16px;
+    padding: 1.75rem;
   }
 
   .skill-category-card h4 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: #fff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     border-bottom: 2px solid rgba(234, 75, 113, 0.2);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
     display: inline-block;
   }
 
@@ -614,10 +603,10 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .skill-category-card li {
     color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
   }
 
   .skill-category-card li::before {
@@ -633,25 +622,25 @@ import pluginImg from '../assets/images/project-plugin.png';
     margin: 0 auto;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 3rem;
-    border-radius: 24px;
+    padding: 2rem 1.25rem;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
   }
 
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .form-group label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-secondary);
     text-transform: uppercase;
@@ -663,10 +652,10 @@ import pluginImg from '../assets/images/project-plugin.png';
     background: rgba(10, 11, 16, 0.6);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 0.85rem 1rem;
+    padding: 0.8rem;
     color: #fff;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
   }
 
@@ -678,11 +667,11 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .form-status {
-    padding: 1rem;
+    padding: 0.85rem;
     border-radius: 8px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .form-status.hidden {
@@ -714,17 +703,17 @@ import pluginImg from '../assets/images/project-plugin.png';
   /* Footer */
   .footer {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.25rem;
     border-top: 1px solid var(--border-color);
     color: #525866;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   /* Animations */
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(15px);
     }
     to {
       opacity: 1;
@@ -732,22 +721,192 @@ import pluginImg from '../assets/images/project-plugin.png';
     }
   }
 
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.75rem;
-    }
-    .hero-card {
-      padding: 3rem 1.5rem;
-    }
-    .nav-links {
-      display: none;
-    }
+
+  /* --- 2. Progressive Enhancement for Tablets & Desktops (>= 768px) --- */
+  @media (min-width: 768px) {
     .section {
-      padding: 4rem 1.5rem;
+      padding: 6rem 2rem;
     }
+
+    .bg-darker {
+      padding-left: calc((100% - 1100px) / 2 + 2rem);
+      padding-right: calc((100% - 1100px) / 2 + 2rem);
+    }
+
+    /* Nav */
+    .nav {
+      padding: 1.25rem 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 8rem 2rem 4rem 2rem;
+    }
+
+    .hero-card {
+      padding: 4rem 3rem;
+      border-radius: 24px;
+    }
+
+    .badge {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-tags {
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tag {
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+    }
+
+    .actions {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      width: auto;
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+    }
+
+    .divider {
+      width: 60px;
+      margin: 1.25rem auto 0 auto;
+    }
+
+    /* Grid layouts */
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      border-radius: 20px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-image-wrapper {
+      height: 220px;
+    }
+
+    .project-content {
+      padding: 2rem;
+    }
+
+    .project-category {
+      font-size: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card p {
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .project-tags {
+      gap: 0.5rem;
+    }
+
+    .project-tags span {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category-card {
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .skill-category-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .skill-category-card li {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      padding-left: 1.5rem;
+    }
+
+    /* Contact */
     .contact-container {
-      padding: 2rem 1.5rem;
+      padding: 3rem;
+      border-radius: 24px;
+    }
+
+    .contact-form {
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.85rem 1rem;
+      font-size: 1rem;
+    }
+
+    .form-status {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 3rem 2rem;
     }
   }
 </style>
