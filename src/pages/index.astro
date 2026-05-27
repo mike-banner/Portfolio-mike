@@ -270,7 +270,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .bg-darker {
-    background-color: #0b0f19;
+    background-color: var(--bg-darker);
     max-width: 100%;
     padding-left: calc((100% - 1100px) / 2 + 2rem);
     padding-right: calc((100% - 1100px) / 2 + 2rem);
@@ -283,10 +283,10 @@ import pluginImg from '../assets/images/project-plugin.png';
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(10, 11, 16, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .nav {
@@ -306,7 +306,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .logo .dot {
-    color: #6366f1;
+    color: var(--accent);
   }
 
   .nav-links {
@@ -316,7 +316,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .nav-links a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -324,7 +324,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .nav-links a:hover {
-    color: #fff;
+    color: var(--text-primary);
   }
 
   /* Hero Section */
@@ -334,20 +334,20 @@ import pluginImg from '../assets/images/project-plugin.png';
     align-items: center;
     min-height: 100vh;
     padding: 8rem 2rem 4rem 2rem;
-    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 45%),
-                radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.12), transparent 45%);
+    background: radial-gradient(circle at top right, rgba(234, 75, 113, 0.12), transparent 45%),
+                radial-gradient(circle at bottom left, rgba(255, 109, 90, 0.12), transparent 45%);
   }
 
   .hero-card {
-    background: rgba(30, 41, 59, 0.4);
+    background: var(--card-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 4rem 3rem;
     max-width: 800px;
     width: 100%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     text-align: center;
     animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -376,18 +376,18 @@ import pluginImg from '../assets/images/project-plugin.png';
   h2 {
     font-size: 1.75rem;
     font-weight: 500;
-    color: #94a3b8;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .hero-desc {
-    color: #cbd5e1;
+    color: var(--text-primary);
     font-size: 1.15rem;
     line-height: 1.75;
     margin-bottom: 2.5rem;
@@ -402,9 +402,9 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .tag {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 12px;
     font-size: 0.85rem;
@@ -413,9 +413,9 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .tag:hover {
-    background: rgba(99, 102, 241, 0.1);
-    border-color: rgba(99, 102, 241, 0.3);
-    color: #818cf8;
+    background: rgba(234, 75, 113, 0.15);
+    border-color: rgba(234, 75, 113, 0.3);
+    color: var(--accent);
     transform: translateY(-2px);
   }
 
@@ -442,26 +442,26 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .btn.primary {
-    background: #6366f1;
+    background: var(--accent);
     color: #fff;
-    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 14px rgba(234, 75, 113, 0.35);
   }
 
   .btn.primary:hover:not(:disabled) {
-    background: #4f46e5;
+    background: var(--accent-orange);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 6px 20px rgba(255, 109, 90, 0.5);
   }
 
   .btn.secondary {
-    background: rgba(255, 255, 255, 0.04);
-    color: #f1f5f9;
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    border-color: var(--border-color);
   }
 
   .btn.secondary:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
   }
 
@@ -476,7 +476,7 @@ import pluginImg from '../assets/images/project-plugin.png';
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #6366f1;
+    color: var(--accent-orange);
   }
 
   .section-title {
@@ -489,7 +489,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   .divider {
     height: 4px;
     width: 60px;
-    background: linear-gradient(90deg, #6366f1, #ec4899);
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent));
     margin: 1.25rem auto 0 auto;
     border-radius: 9999px;
   }
@@ -502,8 +502,8 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .project-card {
-    background: rgba(30, 41, 59, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -513,8 +513,8 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .project-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(99, 102, 241, 0.25);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(234, 75, 113, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   }
 
   .project-image-wrapper {
@@ -522,7 +522,7 @@ import pluginImg from '../assets/images/project-plugin.png';
     height: 220px;
     overflow: hidden;
     position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .project-img {
@@ -546,7 +546,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   .project-category {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #818cf8;
+    color: var(--accent-orange);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: block;
@@ -561,7 +561,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .project-card p {
-    color: #94a3b8;
+    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
@@ -578,9 +578,9 @@ import pluginImg from '../assets/images/project-plugin.png';
   .project-tags span {
     font-size: 0.75rem;
     font-weight: 500;
-    color: #cbd5e1;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
   }
@@ -593,8 +593,8 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .skill-category-card {
-    background: rgba(30, 41, 59, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(23, 27, 38, 0.25);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 2.5rem;
   }
@@ -603,7 +603,7 @@ import pluginImg from '../assets/images/project-plugin.png';
     font-size: 1.25rem;
     color: #fff;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+    border-bottom: 2px solid rgba(234, 75, 113, 0.2);
     padding-bottom: 0.5rem;
     display: inline-block;
   }
@@ -613,7 +613,7 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .skill-category-card li {
-    color: #cbd5e1;
+    color: var(--text-primary);
     margin-bottom: 1rem;
     font-size: 0.95rem;
     position: relative;
@@ -622,7 +622,7 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .skill-category-card li::before {
     content: '→';
-    color: #6366f1;
+    color: var(--accent);
     position: absolute;
     left: 0;
   }
@@ -631,8 +631,8 @@ import pluginImg from '../assets/images/project-plugin.png';
   .contact-container {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(30, 41, 59, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 3rem;
     border-radius: 24px;
     backdrop-filter: blur(10px);
@@ -653,15 +653,15 @@ import pluginImg from '../assets/images/project-plugin.png';
   .form-group label {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
 
   .form-group input,
   .form-group textarea {
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 11, 16, 0.6);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 0.85rem 1rem;
     color: #fff;
@@ -673,8 +673,8 @@ import pluginImg from '../assets/images/project-plugin.png';
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #6366f1;
-    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(234, 75, 113, 0.2);
   }
 
   .form-status {
@@ -690,9 +690,9 @@ import pluginImg from '../assets/images/project-plugin.png';
   }
 
   .form-status.info {
-    background: rgba(99, 102, 241, 0.1);
-    color: #818cf8;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    background: rgba(234, 75, 113, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(234, 75, 113, 0.2);
   }
 
   .form-status.success {
@@ -715,8 +715,8 @@ import pluginImg from '../assets/images/project-plugin.png';
   .footer {
     text-align: center;
     padding: 3rem 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #64748b;
+    border-top: 1px solid var(--border-color);
+    color: #525866;
     font-size: 0.9rem;
   }
 
