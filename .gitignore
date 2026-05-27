@@ -29,3 +29,7 @@ pnpm-debug.log*
 # AI agent settings
 .gemini/
 .agent/
+.cursor/
+.claudecode/
+.anthropic/
+claudecodetemp/
