@@ -34,6 +34,16 @@ Gestion des redirections de pages ou canonicalisation (ex: forcer le sans-www) :
 # /ancien-lien   /nouveau-lien   301
 ```
 
-## 4. Cache & Cloudflare CDN
+## 4. Fonctions Serveur (Cloudflare Pages Functions)
+L'API de contact est hébergée sous `/functions/api/contact.js` et s'exécute directement sur l'infrastructure serverless de Cloudflare lors d'une soumission du formulaire.
+
+### Variables d'environnement requises :
+Dans le tableau de bord Cloudflare Pages (**Paramètres > Variables d'environnement**) :
+1. **`RESEND_API_KEY`** : Ta clé API obtenue sur [Resend](https://resend.com/) pour autoriser l'envoi d'e-mails.
+2. **`TO_EMAIL`** : L'adresse e-mail destinataire sur laquelle tu recevras les formulaires.
+3. **`NODE_VERSION`** : Spécifier `20.20.0` (ou supérieur) pour garantir la compatibilité lors du build.
+
+## 5. Cache & Cloudflare CDN
 * Optimisation auto des images Cloudflare désactivée (car gérée par Astro lors de la compilation pour éviter les coûts inutiles).
 * Activation du protocole **HTTP/3** et **Brotli** dans l'interface Cloudflare.
+
