@@ -1,17 +1,193 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout 
+  title="Accueil" 
+  description="Portfolio professionnel de Mike, développeur Front-End & WordPress spécialisé React, Astro, TypeScript. Découvrez mes réalisations et mon expertise."
+>
+  <main class="hero-container">
+    <div class="glass-card">
+      <div class="badge">Disponible pour opportunités</div>
+      
+      <h1>Mike</h1>
+      <h2>Développeur Front-End & <span class="gradient-text">WordPress</span></h2>
+      
+      <p class="description">
+        Je construis des interfaces web ultra-performantes, accessibles et optimisées pour le référencement naturel. Spécialisé dans les architectures modernes (React, Astro) et la création d'écosystèmes WordPress sur-mesure (thèmes, plugins, headless).
+      </p>
+
+      <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Astro</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">WordPress</span>
+        <span class="tech-tag">SEO & Perf</span>
+      </div>
+
+      <div class="actions">
+        <a href="#projects" class="btn primary">Projets</a>
+        <a href="#contact" class="btn secondary">Me contacter</a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.15), transparent 40%);
+  }
+
+  .glass-card {
+    background: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 680px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981; /* Emerald 500 */
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #94a3b8; /* Slate 400 */
+    margin-bottom: 1.5rem;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+
+  .description {
+    color: #cbd5e1; /* Slate 300 */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tech-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .tech-tag:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+    color: #818cf8;
+    transform: translateY(-2px);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn.primary {
+    background: #6366f1; /* Indigo 500 */
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  }
+
+  .btn.primary:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  }
+
+  .btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f1f5f9;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .glass-card {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+    .actions {
+      flex-direction: column;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+</style>
