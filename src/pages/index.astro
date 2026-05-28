@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 // Importation des images projets locales pour optimisation Astro (AVIF/WebP auto)
 import ecommerceImg from '../assets/images/project-ecommerce.png';
 import vtcImg from '../assets/images/project-vtc.png';
+import vtchubImg from '../assets/images/project-vtchub.png';
 import pluginImg from '../assets/images/project-plugin.png';
 ---
 
@@ -61,6 +62,56 @@ import pluginImg from '../assets/images/project-plugin.png';
       <article class="project-card">
         <div class="project-image-wrapper">
           <Image 
+            src={vtcImg} 
+            alt="Interface mobile de la plateforme SaaS VTC" 
+            width={600} 
+            height={400} 
+            format="avif"
+            class="project-img"
+          />
+        </div>
+        <div class="project-content">
+          <span class="project-category">React / TypeScript / Cloudflare</span>
+          <h3>Plateforme SaaS VTC</h3>
+          <p>Moteur de réservation B2B complexe avec estimation des tarifs à la volée, géolocalisation Cloudflare Workers et caching KV.</p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Workers</span>
+            <span>Tailwind</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-image-wrapper">
+          <Image 
+            src={vtchubImg} 
+            alt="Interface mobile de VTC HUB" 
+            width={600} 
+            height={400} 
+            format="avif"
+            class="project-img"
+          />
+        </div>
+        <div class="project-content">
+          <span class="project-category">Astro 5 / Supabase / Stripe</span>
+          <h3>VTC HUB — Vitrine Multi-Tenant</h3>
+          <p>Plateforme de réservation et d'exposition de services VTC "Shopify-like". Résolution Host-Header, isolation multi-tenant (RLS) et tunnel Stripe Checkout sécurisé.</p>
+          <div class="project-tags">
+            <span>Astro 5</span>
+            <span>Supabase</span>
+            <span>Stripe</span>
+            <span>Tailwind v4</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-image-wrapper">
+          <Image 
             src={ecommerceImg} 
             alt="Mockup du site e-commerce Meliponini" 
             width={600} 
@@ -82,32 +133,7 @@ import pluginImg from '../assets/images/project-plugin.png';
         </div>
       </article>
 
-      <!-- Project 2 -->
-      <article class="project-card">
-        <div class="project-image-wrapper">
-          <Image 
-            src={vtcImg} 
-            alt="Interface mobile de la plateforme SaaS VTC" 
-            width={600} 
-            height={400} 
-            format="avif"
-            class="project-img"
-          />
-        </div>
-        <div class="project-content">
-          <span class="project-category">React / TypeScript</span>
-          <h3>Plateforme SaaS VTC</h3>
-          <p>Moteur de réservation B2B complexe avec estimation des tarifs à la volée, géolocalisation Cloudflare Workers et caching KV.</p>
-          <div class="project-tags">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Workers</span>
-            <span>Tailwind</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
+      <!-- Project 4 -->
       <article class="project-card">
         <div class="project-image-wrapper">
           <Image 
