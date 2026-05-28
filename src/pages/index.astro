@@ -649,8 +649,8 @@ import pluginImg from '../assets/images/project-plugin.png';
 
   .form-group input,
   .form-group textarea {
-    background: rgba(10, 11, 16, 0.6);
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     padding: 0.8rem;
     color: #fff;
@@ -659,11 +659,17 @@ import pluginImg from '../assets/images/project-plugin.png';
     transition: all 0.3s ease;
   }
 
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 2px rgba(234, 75, 113, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 3px rgba(255, 109, 90, 0.2);
   }
 
   .form-status {
