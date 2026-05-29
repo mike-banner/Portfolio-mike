@@ -17,7 +17,6 @@ const {
 
 const siteName = "Portfolio | Développeur Front-End & WordPress";
 
-// Structured Data (JSON-LD) for Person/ProfessionalService
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -25,17 +24,10 @@ const personSchema = {
   "jobTitle": "Développeur Front-End & WordPress",
   "url": Astro.site ? Astro.site.href : Astro.url.origin,
   "sameAs": [
-    "https://github.com/mike-banner", // À adapter par l'utilisateur
-    // "https://linkedin.com/in/...",
+    "https://github.com/mike-banner",
   ],
   "knowsAbout": [
-    "React",
-    "Astro",
-    "TypeScript",
-    "JavaScript",
-    "WordPress",
-    "SEO",
-    "Web Performance"
+    "React", "Astro", "TypeScript", "JavaScript", "WordPress", "SEO", "Web Performance"
   ]
 };
 ---
@@ -49,13 +41,11 @@ const personSchema = {
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
 
-    {/* Primary Meta Tags */}
     <title>{title} | {siteName}</title>
     <meta name="title" content={`${title} | ${siteName}`} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
-    {/* Open Graph / Facebook */}
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
@@ -63,17 +53,15 @@ const personSchema = {
     <meta property="og:image" content={new URL(image, Astro.url)} />
     <meta property="og:site_name" content={siteName} />
 
-    {/* Twitter */}
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    {/* Preload critical fonts if any (example) */}
-    {/* <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin /> */}
+    <link rel="preload" href="/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
 
-    {/* JSON-LD Structured Data */}
     <script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
   </head>
   <body>
@@ -82,18 +70,53 @@ const personSchema = {
 </html>
 
 <style is:global>
-  :root {
-    --bg-main: #0a0b10;
-    --bg-darker: #050608;
-    --accent: #ea4b71;         /* Rose n8n */
-    --accent-orange: #ff6d5a;  /* Orange/Corail n8n */
-    --text-primary: #f4f5f6;
-    --text-secondary: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.06);
-    --card-bg: rgba(23, 27, 38, 0.4);
+  @font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url('/fonts/archivo.woff2') format('woff2');
   }
 
-  /* Reset CSS moderne et basique */
+  @font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('/fonts/space-grotesk.woff2') format('woff2');
+  }
+
+  :root {
+    /* Backgrounds */
+    --bg-base:     #030712;
+    --bg-surface:  #0D1117;
+    --bg-elevated: #161B22;
+
+    /* Accents */
+    --accent:       #6366F1;
+    --accent-light: #818CF8;
+    --accent-cyan:  #22D3EE;
+    --accent-glow:  rgba(99, 102, 241, 0.35);
+
+    /* Text */
+    --text-primary:   #F0F6FC;
+    --text-secondary: #8B949E;
+    --text-muted:     #484F58;
+
+    /* Borders */
+    --border:       rgba(48, 54, 61, 1);
+    --border-hover: rgba(99, 102, 241, 0.5);
+
+    /* Z-index scale */
+    --z-nav:    50;
+    --z-drawer: 40;
+    --z-overlay: 30;
+
+    /* Typography */
+    --font-heading: 'Archivo', system-ui, sans-serif;
+    --font-body:    'Space Grotesk', system-ui, sans-serif;
+  }
+
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -101,22 +124,40 @@ const personSchema = {
   }
 
   html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--bg-main);
+    font-family: var(--font-body);
+    background-color: var(--bg-base);
     color: var(--text-primary);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     min-height: 100vh;
-    line-height: 1.5;
-    background-color: var(--bg-main);
+    line-height: 1.6;
+    background-color: var(--bg-base);
+    overflow-x: hidden;
   }
 
   img {
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
