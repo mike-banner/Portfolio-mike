@@ -34,3 +34,9 @@ pnpm-debug.log*
 .anthropic/
 .claude/
 claudecodetemp/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
