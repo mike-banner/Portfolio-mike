@@ -5,7 +5,8 @@ import { Image } from 'astro:assets';
 import ecommerceImg from '../assets/images/project-ecommerce.png';
 import vtcImg from '../assets/images/project-vtc.png';
 import vtchubImg from '../assets/images/project-vtchub.png';
-import pluginImg from '../assets/images/project-plugin.png';
+import briquerougeImg from '../assets/images/project-briquerouge.png';
+import langueturquoiseImg from '../assets/images/project-langueturquoise.png';
 ---
 
 <Layout
@@ -120,9 +121,7 @@ import pluginImg from '../assets/images/project-plugin.png';
     </div>
 
     <div class="project-filters" role="group" aria-label="Filtrer les projets par technologie">
-      <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="astro">Astro</button>
-      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn active" data-filter="modern">Astro / React</button>
       <button class="filter-btn" data-filter="wordpress">WordPress</button>
       <button class="filter-btn" data-filter="devops">DevOps &amp; Edge</button>
     </div>
@@ -202,26 +201,50 @@ import pluginImg from '../assets/images/project-plugin.png';
         </div>
       </article>
 
-      <!-- Project 4 — wide -->
-      <article class="project-card card-wide" data-tech="wordpress">
+      <!-- Project 4 — small -->
+      <article class="project-card card-small" data-tech="wordpress">
         <div class="card-image card-image--short">
           <Image
-            src={pluginImg}
-            alt="Interface du plugin WP Invoice Generator"
+            src={briquerougeImg}
+            alt="Mockup du site Studio La Brique Rouge"
             width={600}
             height={340}
             format="avif"
             class="proj-img"
           />
           <div class="card-overlay">
-            <span class="overlay-category">Extension WordPress</span>
+            <span class="overlay-category">Site Média &amp; Réservation</span>
           </div>
         </div>
         <div class="card-body">
-          <h3>WP Invoice Generator</h3>
-          <p>Plugin WordPress générant automatiquement des factures PDF certifiées à l'achat et les envoyant par e-mail.</p>
+          <h3>Studio La Brique Rouge</h3>
+          <p>Optimisation extrême des performances (Core Web Vitals) pour l'affichage de portfolios photo/vidéo HD et tunnel de demande de devis.</p>
           <ul class="tech-pills" aria-label="Technologies utilisées">
-            <li>PHP</li><li>WordPress API</li><li>TCPDF</li><li>JS</li>
+            <li>WordPress</li><li>Vanilla JS</li><li>WebPerf</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Project 5 — wide -->
+      <article class="project-card card-wide" data-tech="wordpress">
+        <div class="card-image card-image--short">
+          <Image
+            src={langueturquoiseImg}
+            alt="Mockup du site Langue Turquoise"
+            width={600}
+            height={340}
+            format="avif"
+            class="proj-img"
+          />
+          <div class="card-overlay">
+            <span class="overlay-category">Accessibilité WCAG / RGAA</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Langue Turquoise</h3>
+          <p>Conception d'un portail inclusif avec intégration vidéo LSF, conformité rigoureuse aux normes d'accessibilité numérique (RGAA).</p>
+          <ul class="tech-pills" aria-label="Technologies utilisées">
+            <li>WordPress</li><li>a11y</li><li>HTML5 Semantics</li>
           </ul>
         </div>
       </article>
@@ -337,13 +360,20 @@ import pluginImg from '../assets/images/project-plugin.png';
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      const filter = button.getAttribute('data-filter') || 'all';
+      const filter = button.getAttribute('data-filter') || 'modern';
 
       projectCards.forEach(card => {
         const techAttr = card.getAttribute('data-tech') || '';
         const techs = techAttr.split(' ');
         
-        if (filter === 'all' || techs.includes(filter)) {
+        let isVisible = false;
+        if (filter === 'modern') {
+          isVisible = techs.includes('astro') || techs.includes('react');
+        } else {
+          isVisible = techs.includes(filter);
+        }
+
+        if (isVisible) {
           card.classList.remove('filtered-out');
         } else {
           card.classList.add('filtered-out');
@@ -351,6 +381,12 @@ import pluginImg from '../assets/images/project-plugin.png';
       });
     });
   });
+
+  // Déclencher le filtre par défaut au chargement
+  const defaultActive = document.querySelector('.filter-btn.active') as HTMLButtonElement | null;
+  if (defaultActive) {
+    defaultActive.click();
+  }
 
   /* ── Mobile menu ── */
   const menuBtn = document.getElementById('menuBtn') as HTMLButtonElement | null;
