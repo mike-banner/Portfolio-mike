@@ -3,8 +3,14 @@ import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://portfolio-mike.pages.dev', // Remplacer par ton domaine personnalisé
-  integrations: [sitemap()]
+  // Remplacer par ton domaine personnalisé
+  site: 'https://portfolio-mike.pages.dev',
+
+  integrations: [sitemap()],
+  output: "hybrid",
+  adapter: cloudflare()
 });
