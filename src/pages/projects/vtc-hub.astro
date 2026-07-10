@@ -41,6 +41,9 @@ import Layout from '../../layouts/Layout.astro';
           <li><strong>Superadmin:</strong> Internal tool for managing tenant subscriptions and platform health.</li>
         </ul>
 
+        <h2>White-Label Frontend Factory</h2>
+        <p>A major architectural achievement of this project is its capability to dynamically provision <strong>thousands of independent driver websites</strong>. By leveraging Cloudflare for SaaS and edge routing, drivers can spawn their own personalized booking sites under their own custom domains. These sites are fully linked to their central backoffice in realtime, while being served from a single, highly-optimized frontend codebase.</p>
+
         <h2>Technical Highlights</h2>
         <p>The core challenge was <strong>multi-tenant data isolation</strong> without sacrificing performance. I utilized PostgreSQL's Row Level Security (RLS) tightly coupled with Supabase Auth to ensure that a driver in Tenant A cannot mathematically access dispatch data from Tenant B.</p>
         
