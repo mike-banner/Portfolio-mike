@@ -34,24 +34,6 @@ import Layout from '../../layouts/Layout.astro';
       <div class="cs-body">
         <div class="architecture-grid">
           <div class="arch-layer">
-            <h3>🌐 Frontend Layer</h3>
-            <p><strong>Astro 5 & React 19 Monorepo</strong></p>
-            <p>A unified codebase delivering three distinct applications. The <strong>Driver App</strong> is a mobile-first PWA for trip management and PDF invoice generation. The <strong>Backoffice</strong> provides real-time fleet dispatching, and the <strong>Superadmin</strong> handles tenant health and billing.</p>
-            
-            <h4>White-Label Engine</h4>
-            <p>Dynamically provisions thousands of independent driver booking websites. Each site is spawned instantly, fully customized, and connected to the central backoffice.</p>
-          </div>
-
-          <div class="arch-layer">
-            <h3>⚙️ Backend & Data Layer</h3>
-            <p><strong>Supabase & PostgreSQL</strong></p>
-            <p>A strictly typed, high-performance database layer managing complex booking state machines, surge pricing calculations, and immutable accounting ledgers.</p>
-            
-            <h4>Multi-Tenant RLS</h4>
-            <p>PostgreSQL Row Level Security guarantees absolute data isolation. A driver in Tenant A cannot mathematically query or access dispatch data belonging to Tenant B.</p>
-          </div>
-
-          <div class="arch-layer">
             <h3>☁️ Cloud & Edge Layer</h3>
             <p><strong>Cloudflare Pages & Workers</strong></p>
             <p>The entire monorepo is continuously deployed to Cloudflare's global edge network, ensuring sub-50ms latency worldwide.</p>
@@ -74,6 +56,24 @@ import Layout from '../../layouts/Layout.astro';
                 <br>{'}'}
               </div>
             </div>
+          </div>
+
+          <div class="arch-layer">
+            <h3>⚙️ Backend & Data Layer</h3>
+            <p><strong>Supabase & PostgreSQL</strong></p>
+            <p>A strictly typed, high-performance database layer managing complex booking state machines, surge pricing calculations, and immutable accounting ledgers.</p>
+            
+            <h4>Multi-Tenant RLS</h4>
+            <p>PostgreSQL Row Level Security guarantees absolute data isolation. A driver in Tenant A cannot mathematically query or access dispatch data belonging to Tenant B.</p>
+          </div>
+
+          <div class="arch-layer">
+            <h3>🌐 Frontend Layer</h3>
+            <p><strong>Astro 5 & React 19 Monorepo</strong></p>
+            <p>A unified codebase delivering three distinct applications. The <strong>Driver App</strong> is a mobile-first PWA for trip management and PDF invoice generation. The <strong>Backoffice</strong> provides real-time fleet dispatching, and the <strong>Superadmin</strong> handles tenant health and billing.</p>
+            
+            <h4>White-Label Engine</h4>
+            <p>Dynamically provisions thousands of independent driver booking websites. Each site is spawned instantly, fully customized, and connected to the central backoffice.</p>
           </div>
         </div>
 

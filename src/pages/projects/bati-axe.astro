@@ -34,24 +34,6 @@ import Layout from '../../layouts/Layout.astro';
       <div class="cs-body">
         <div class="architecture-grid">
           <div class="arch-layer">
-            <h3>🌐 Frontend Layer</h3>
-            <p><strong>Nuxt 4 & Vue 3 (Server-Side Rendered)</strong></p>
-            <p>A highly interactive double-sided marketplace providing SEO-optimized landing pages for homeowners and a dynamic, gated dashboard for construction professionals.</p>
-            
-            <h4>Magic-Link Auth</h4>
-            <p>Passwordless authentication via Resend guarantees zero friction for less tech-savvy professionals, driving higher conversion rates on lead purchases.</p>
-          </div>
-
-          <div class="arch-layer">
-            <h3>⚙️ Backend & Data Layer</h3>
-            <p><strong>Supabase & Stripe Webhooks</strong></p>
-            <p>The monetization engine is entirely serverless. Supabase Edge Functions intercept Stripe webhook events securely, instantly provisioning or revoking access to premium leads directly within the PostgreSQL database.</p>
-            
-            <h4>Storage Optimization</h4>
-            <p>Direct-to-R2 uploads handle massive portfolio images and legal documents, entirely bypassing Supabase's storage bandwidth limitations and reducing infrastructure costs.</p>
-          </div>
-
-          <div class="arch-layer">
             <h3>☁️ Infrastructure Layer</h3>
             <p><strong>Terraform (IaC)</strong></p>
             <p>The entire platform is defined immutably using Terraform. From Cloudflare DNS and Pages deployments to the Supabase database configurations, staging and production are mathematically identical.</p>
@@ -69,6 +51,24 @@ import Layout from '../../layouts/Layout.astro';
                 <br>{'}'}
               </div>
             </div>
+          </div>
+
+          <div class="arch-layer">
+            <h3>⚙️ Backend & Data Layer</h3>
+            <p><strong>Supabase & Stripe Webhooks</strong></p>
+            <p>The monetization engine is entirely serverless. Supabase Edge Functions intercept Stripe webhook events securely, instantly provisioning or revoking access to premium leads directly within the PostgreSQL database.</p>
+            
+            <h4>Storage Optimization</h4>
+            <p>Direct-to-R2 uploads handle massive portfolio images and legal documents, entirely bypassing Supabase's storage bandwidth limitations and reducing infrastructure costs.</p>
+          </div>
+
+          <div class="arch-layer">
+            <h3>🌐 Frontend Layer</h3>
+            <p><strong>Nuxt 4 & Vue 3 (Server-Side Rendered)</strong></p>
+            <p>A highly interactive double-sided marketplace providing SEO-optimized landing pages for homeowners and a dynamic, gated dashboard for construction professionals.</p>
+            
+            <h4>Magic-Link Auth</h4>
+            <p>Passwordless authentication via Resend guarantees zero friction for less tech-savvy professionals, driving higher conversion rates on lead purchases.</p>
           </div>
         </div>
 
