@@ -59,8 +59,9 @@ const personSchema = {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    <link rel="preload" href="/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)} />
   </head>
@@ -70,21 +71,7 @@ const personSchema = {
 </html>
 
 <style is:global>
-  @font-face {
-    font-family: 'Archivo';
-    font-style: normal;
-    font-weight: 400 800;
-    font-display: swap;
-    src: url('/fonts/archivo.woff2') format('woff2');
-  }
 
-  @font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400 700;
-    font-display: swap;
-    src: url('/fonts/space-grotesk.woff2') format('woff2');
-  }
 
   :root {
     /* Backgrounds */
@@ -113,8 +100,8 @@ const personSchema = {
     --z-overlay: 30;
 
     /* Typography */
-    --font-heading: 'Archivo', system-ui, sans-serif;
-    --font-body:    'Space Grotesk', system-ui, sans-serif;
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body:    'Inter', system-ui, -apple-system, sans-serif;
   }
 
   *, *::before, *::after {
@@ -147,8 +134,8 @@ const personSchema = {
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
   }
 
   @media (prefers-reduced-motion: reduce) {

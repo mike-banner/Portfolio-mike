@@ -123,11 +123,14 @@ import headshotImg from '../assets/images/headshot.png';
                 <div class="code-header">
                   <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
                 </div>
-                <div class="code-body">
-                  <span class="kw">export const</span> <span class="fn">calculateFare</span> = (route) => {'{'}
-                  <br>&nbsp;&nbsp;<span class="kw">const</span> base = getBaseRate(route);
-                  <br>&nbsp;&nbsp;<span class="kw">return</span> withSurge(base);
-                  <br>{'}'}
+                <div class="code-body" style="font-size: 0.8rem;">
+                  <span style="color: var(--text-muted);">// Multi-tenant data isolation</span>
+                  <br><span class="kw">CREATE POLICY</span> <span class="str">"Tenant Isolation"</span>
+                  <br>&nbsp;&nbsp;<span class="kw">ON</span> <span class="fn">public.trips</span>
+                  <br>&nbsp;&nbsp;<span class="kw">FOR ALL</span>
+                  <br>&nbsp;&nbsp;<span class="kw">USING</span> (
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;tenant_id = <span class="fn">auth.jwt</span>()->><span class="str">'app_metadata'</span>->><span class="str">'tenant'</span>
+                  <br>&nbsp;&nbsp;);
                 </div>
              </div>
           </div>
@@ -151,10 +154,13 @@ import headshotImg from '../assets/images/headshot.png';
                 <div class="code-header">
                   <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
                 </div>
-                <div class="code-body">
-                  <span class="kw">resource</span> <span class="str">"cloudflare_pages_project"</span> <span class="fn">"app"</span> {'{'}
-                  <br>&nbsp;&nbsp;name = <span class="str">"bati-axe"</span>
-                  <br>&nbsp;&nbsp;production_branch = <span class="str">"main"</span>
+                <div class="code-body" style="font-size: 0.8rem;">
+                  <span style="color: var(--text-muted);">// Edge Function: Stripe Webhook</span>
+                  <br><span class="kw">if</span> (event.type === <span class="str">'invoice.paid'</span>) {'{'}
+                  <br>&nbsp;&nbsp;<span class="kw">await</span> <span class="fn">supabase</span>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;.from(<span class="str">'professional_leads'</span>)
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;.update({'{'} is_unlocked: <span class="kw">true</span> {'}'})
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;.eq(<span class="str">'customer_id'</span>, event.data.customer);
                   <br>{'}'}
                 </div>
              </div>
@@ -252,11 +258,12 @@ import headshotImg from '../assets/images/headshot.png';
     </div>
   </section>
 
-  <section id="contact" class="section" aria-labelledby="contact-heading">
-    <div class="section-header">
-      <h2 id="contact-heading" class="section-title">Get in touch</h2>
-      <p class="contact-subtitle">Freelance projects — rate on request.</p>
-    </div>
+  <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+    <div class="contact-inner">
+      <div class="section-header">
+        <h2 id="contact-heading" class="section-title">Get in touch</h2>
+        <p class="contact-subtitle">Freelance projects — rate on request.</p>
+      </div>
 
     <div class="contact-wrap">
       <form class="contact-form" id="contactForm" novalidate>
@@ -281,6 +288,7 @@ import headshotImg from '../assets/images/headshot.png';
           Send Message
         </button>
       </form>
+    </div>
     </div>
   </section>
 
@@ -993,6 +1001,34 @@ import headshotImg from '../assets/images/headshot.png';
     content: "▹";
     color: var(--accent);
     font-weight: bold;
+  }
+
+  .contact-section {
+    position: relative;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    padding: 6rem 1.25rem;
+    margin-top: 4rem;
+    transition: background 0.3s ease;
+  }
+  .contact-section:hover {
+    background: #11151c; /* slight lift on hover */
+  }
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .contact-section:hover::before {
+    opacity: 1;
+  }
+  .contact-inner {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .contact-wrap {
