@@ -1,0 +1,1430 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "astro.config.mjs",
+      "file_type": "code",
+      "source_file": "astro.config.mjs",
+      "source_location": "L1",
+      "id": "astro_config",
+      "community": 11,
+      "norm_label": "astro.config.mjs"
+    },
+    {
+      "label": "contact.js",
+      "file_type": "code",
+      "source_file": "functions/api/contact.js",
+      "source_location": "L1",
+      "id": "api_contact",
+      "community": 10,
+      "norm_label": "contact.js"
+    },
+    {
+      "label": "onRequestPost()",
+      "file_type": "code",
+      "source_file": "functions/api/contact.js",
+      "source_location": "L1",
+      "id": "api_contact_onrequestpost",
+      "community": 10,
+      "norm_label": "onrequestpost()"
+    },
+    {
+      "label": "onRequestOptions()",
+      "file_type": "code",
+      "source_file": "functions/api/contact.js",
+      "source_location": "L78",
+      "id": "api_contact_onrequestoptions",
+      "community": 10,
+      "norm_label": "onrequestoptions()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package",
+      "community": 0,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "package_name",
+      "community": 0,
+      "norm_label": "name"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "package_type",
+      "community": 0,
+      "norm_label": "type"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "package_version",
+      "community": 0,
+      "norm_label": "version"
+    },
+    {
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "package_engines",
+      "community": 0,
+      "norm_label": "engines"
+    },
+    {
+      "label": "node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "package_engines_node",
+      "community": 0,
+      "norm_label": "node"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "package_scripts",
+      "community": 0,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "package_scripts_dev",
+      "community": 0,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "package_scripts_build",
+      "community": 0,
+      "norm_label": "build"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "id": "package_scripts_preview",
+      "community": 0,
+      "norm_label": "preview"
+    },
+    {
+      "label": "astro",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "package_scripts_astro",
+      "community": 0,
+      "norm_label": "astro"
+    },
+    {
+      "label": "deploy",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "package_scripts_deploy",
+      "community": 0,
+      "norm_label": "deploy"
+    },
+    {
+      "label": "cf-typegen",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "package_scripts_cf_typegen",
+      "community": 0,
+      "norm_label": "cf-typegen"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "package_dependencies",
+      "community": 8,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@astrojs/cloudflare",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_dependencies_astrojs_cloudflare",
+      "community": 8,
+      "norm_label": "@astrojs/cloudflare"
+    },
+    {
+      "label": "@astrojs/sitemap",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "package_dependencies_astrojs_sitemap",
+      "community": 8,
+      "norm_label": "@astrojs/sitemap"
+    },
+    {
+      "label": "astro",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "package_dependencies_astro",
+      "community": 8,
+      "norm_label": "astro"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "package_devdependencies",
+      "community": 0,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "wrangler",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "package_devdependencies_wrangler",
+      "community": 0,
+      "norm_label": "wrangler"
+    },
+    {
+      "label": "env.d.ts",
+      "file_type": "code",
+      "source_file": "src/env.d.ts",
+      "source_location": "L1",
+      "id": "src_env_d",
+      "community": 12,
+      "norm_label": "env.d.ts"
+    },
+    {
+      "label": "../../layouts/Layout.astro",
+      "file_type": "code",
+      "source_file": "src/layouts/Layout.astro",
+      "source_location": "L1",
+      "confidence": "EXTRACTED",
+      "id": "layouts_layout",
+      "community": 1,
+      "norm_label": "../../layouts/layout.astro"
+    },
+    {
+      "label": "personSchema",
+      "file_type": "code",
+      "source_file": "src/layouts/Layout.astro",
+      "source_location": "L20",
+      "id": "layouts_layout_personschema",
+      "community": 1,
+      "norm_label": "personschema"
+    },
+    {
+      "label": "index.astro",
+      "file_type": "code",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L1",
+      "id": "pages_index",
+      "community": 1,
+      "norm_label": "index.astro"
+    },
+    {
+      "label": "astro:assets",
+      "file_type": "code",
+      "source_file": "astro:assets",
+      "confidence": "EXTRACTED",
+      "id": "astro_assets",
+      "community": 1,
+      "norm_label": "astro:assets"
+    },
+    {
+      "label": "../assets/images/project-ecommerce.png",
+      "file_type": "code",
+      "source_file": "src/assets/images/project-ecommerce.png",
+      "confidence": "EXTRACTED",
+      "id": "home_mike_projects_portfolio_src_assets_images_project_ecommerce_png",
+      "community": 1,
+      "norm_label": "../assets/images/project-ecommerce.png"
+    },
+    {
+      "label": "../assets/images/project-vtc.png",
+      "file_type": "code",
+      "source_file": "src/assets/images/project-vtc.png",
+      "confidence": "EXTRACTED",
+      "id": "home_mike_projects_portfolio_src_assets_images_project_vtc_png",
+      "community": 1,
+      "norm_label": "../assets/images/project-vtc.png"
+    },
+    {
+      "label": "../assets/images/project-briquerouge.png",
+      "file_type": "code",
+      "source_file": "src/assets/images/project-briquerouge.png",
+      "confidence": "EXTRACTED",
+      "id": "home_mike_projects_portfolio_src_assets_images_project_briquerouge_png",
+      "community": 1,
+      "norm_label": "../assets/images/project-briquerouge.png"
+    },
+    {
+      "label": "../assets/images/headshot.png",
+      "file_type": "code",
+      "source_file": "src/assets/images/headshot.png",
+      "confidence": "EXTRACTED",
+      "id": "home_mike_projects_portfolio_src_assets_images_headshot_png",
+      "community": 1,
+      "norm_label": "../assets/images/headshot.png"
+    },
+    {
+      "label": "bati-axe.astro",
+      "file_type": "code",
+      "source_file": "src/pages/projects/bati-axe.astro",
+      "source_location": "L1",
+      "id": "projects_bati_axe",
+      "community": 1,
+      "norm_label": "bati-axe.astro"
+    },
+    {
+      "label": "vtc-hub.astro",
+      "file_type": "code",
+      "source_file": "src/pages/projects/vtc-hub.astro",
+      "source_location": "L1",
+      "id": "projects_vtc_hub",
+      "community": 1,
+      "norm_label": "vtc-hub.astro"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig",
+      "community": 9,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "tsconfig_extends",
+      "community": 9,
+      "norm_label": "extends"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "tsconfig_include",
+      "community": 9,
+      "norm_label": "include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "id": "tsconfig_exclude",
+      "community": 9,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude",
+      "community": 5,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_claude_md",
+      "community": 5,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "Project",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "id": "claude_project",
+      "community": 5,
+      "norm_label": "project"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L9",
+      "id": "claude_commands",
+      "community": 5,
+      "norm_label": "commands"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L17",
+      "id": "claude_architecture",
+      "community": 5,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "SEO & Performance Rules (from `docs/SEO-SPEC.md`)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L25",
+      "id": "claude_seo_performance_rules_from_docs_seo_spec_md",
+      "community": 5,
+      "norm_label": "seo & performance rules (from `docs/seo-spec.md`)"
+    },
+    {
+      "label": "Cloudflare Deployment (from `docs/CLOUDFLARE.md`)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L45",
+      "id": "claude_cloudflare_deployment_from_docs_cloudflare_md",
+      "community": 5,
+      "norm_label": "cloudflare deployment (from `docs/cloudflare.md`)"
+    },
+    {
+      "label": "PRODUCT.md",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L1",
+      "id": "product",
+      "community": 2,
+      "norm_label": "product.md"
+    },
+    {
+      "label": "Product",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L1",
+      "id": "product_product",
+      "community": 2,
+      "norm_label": "product"
+    },
+    {
+      "label": "Register",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L3",
+      "id": "product_register",
+      "community": 2,
+      "norm_label": "register"
+    },
+    {
+      "label": "Users",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L7",
+      "id": "product_users",
+      "community": 2,
+      "norm_label": "users"
+    },
+    {
+      "label": "Product Purpose",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L11",
+      "id": "product_product_purpose",
+      "community": 2,
+      "norm_label": "product purpose"
+    },
+    {
+      "label": "Brand Personality",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L15",
+      "id": "product_brand_personality",
+      "community": 2,
+      "norm_label": "brand personality"
+    },
+    {
+      "label": "Anti-references",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L19",
+      "id": "product_anti_references",
+      "community": 2,
+      "norm_label": "anti-references"
+    },
+    {
+      "label": "Design Principles",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L25",
+      "id": "product_design_principles",
+      "community": 2,
+      "norm_label": "design principles"
+    },
+    {
+      "label": "Accessibility & Inclusion",
+      "file_type": "document",
+      "source_file": "PRODUCT.md",
+      "source_location": "L33",
+      "id": "product_accessibility_inclusion",
+      "community": 2,
+      "norm_label": "accessibility & inclusion"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 4,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Portfolio | D\u00e9veloppeur Front-End & WordPress",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_portfolio_d\u00e9veloppeur_front_end_wordpress",
+      "community": 4,
+      "norm_label": "portfolio | developpeur front-end & wordpress"
+    },
+    {
+      "label": "\ud83d\udc64 Profil & Expertise",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "readme_profil_expertise",
+      "community": 4,
+      "norm_label": "\ud83d\udc64 profil & expertise"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Stack Technique & Comp\u00e9tences",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "id": "readme_stack_technique_comp\u00e9tences",
+      "community": 4,
+      "norm_label": "\ud83d\udee0\ufe0f stack technique & competences"
+    },
+    {
+      "label": "Expertises Principales",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "id": "readme_expertises_principales",
+      "community": 4,
+      "norm_label": "expertises principales"
+    },
+    {
+      "label": "Comp\u00e9tences Secondaires & Transverses",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "id": "readme_comp\u00e9tences_secondaires_transverses",
+      "community": 4,
+      "norm_label": "competences secondaires & transverses"
+    },
+    {
+      "label": "\u26a1 Performances & Objectifs SEO du Projet",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "id": "readme_performances_objectifs_seo_du_projet",
+      "community": 4,
+      "norm_label": "\u26a1 performances & objectifs seo du projet"
+    },
+    {
+      "label": "\u2699\ufe0f Commandes de D\u00e9veloppement",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "id": "readme_commandes_de_d\u00e9veloppement",
+      "community": 4,
+      "norm_label": "\u2699\ufe0f commandes de developpement"
+    },
+    {
+      "label": "CLOUDFLARE.md",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L1",
+      "id": "docs_cloudflare",
+      "community": 3,
+      "norm_label": "cloudflare.md"
+    },
+    {
+      "label": "Configuration D\u00e9ploiement Cloudflare Pages",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L1",
+      "id": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "community": 3,
+      "norm_label": "configuration deploiement cloudflare pages"
+    },
+    {
+      "label": "1. Configuration du Build",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L5",
+      "id": "docs_cloudflare_1_configuration_du_build",
+      "community": 3,
+      "norm_label": "1. configuration du build"
+    },
+    {
+      "label": "2. En-t\u00eates HTTP (`public/_headers`)",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L12",
+      "id": "docs_cloudflare_2_en_t\u00eates_http_public_headers",
+      "community": 3,
+      "norm_label": "2. en-tetes http (`public/_headers`)"
+    },
+    {
+      "label": "3. Redirections (`public/_redirects`)",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L28",
+      "id": "docs_cloudflare_3_redirections_public_redirects",
+      "community": 3,
+      "norm_label": "3. redirections (`public/_redirects`)"
+    },
+    {
+      "label": "4. Fonctions Serveur (Cloudflare Pages Functions)",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L37",
+      "id": "docs_cloudflare_4_fonctions_serveur_cloudflare_pages_functions",
+      "community": 3,
+      "norm_label": "4. fonctions serveur (cloudflare pages functions)"
+    },
+    {
+      "label": "Variables d'environnement requises :",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L40",
+      "id": "docs_cloudflare_variables_d_environnement_requises",
+      "community": 3,
+      "norm_label": "variables d'environnement requises :"
+    },
+    {
+      "label": "5. Cache & Cloudflare CDN",
+      "file_type": "document",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L46",
+      "id": "docs_cloudflare_5_cache_cloudflare_cdn",
+      "community": 3,
+      "norm_label": "5. cache & cloudflare cdn"
+    },
+    {
+      "label": "PROJECT.md",
+      "file_type": "document",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L1",
+      "id": "docs_project",
+      "community": 7,
+      "norm_label": "project.md"
+    },
+    {
+      "label": "Projet : Portfolio Astro + Cloudflare",
+      "file_type": "document",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L1",
+      "id": "docs_project_projet_portfolio_astro_cloudflare",
+      "community": 7,
+      "norm_label": "projet : portfolio astro + cloudflare"
+    },
+    {
+      "label": "Stack Technique",
+      "file_type": "document",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L5",
+      "id": "docs_project_stack_technique",
+      "community": 7,
+      "norm_label": "stack technique"
+    },
+    {
+      "label": "Structure du Projet (Cible)",
+      "file_type": "document",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L11",
+      "id": "docs_project_structure_du_projet_cible",
+      "community": 7,
+      "norm_label": "structure du projet (cible)"
+    },
+    {
+      "label": "\u00c9tapes de D\u00e9veloppement",
+      "file_type": "document",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L29",
+      "id": "docs_project_\u00e9tapes_de_d\u00e9veloppement",
+      "community": 7,
+      "norm_label": "etapes de developpement"
+    },
+    {
+      "label": "SEO-SPEC.md",
+      "file_type": "document",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L1",
+      "id": "docs_seo_spec",
+      "community": 6,
+      "norm_label": "seo-spec.md"
+    },
+    {
+      "label": "Sp\u00e9cifications SEO & Performance",
+      "file_type": "document",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L1",
+      "id": "docs_seo_spec_sp\u00e9cifications_seo_performance",
+      "community": 6,
+      "norm_label": "specifications seo & performance"
+    },
+    {
+      "label": "1. M\u00e9tadonn\u00e9es & Balises HTML",
+      "file_type": "document",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L5",
+      "id": "docs_seo_spec_1_m\u00e9tadonn\u00e9es_balises_html",
+      "community": 6,
+      "norm_label": "1. metadonnees & balises html"
+    },
+    {
+      "label": "2. Performances & Core Web Vitals",
+      "file_type": "document",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L15",
+      "id": "docs_seo_spec_2_performances_core_web_vitals",
+      "community": 6,
+      "norm_label": "2. performances & core web vitals"
+    },
+    {
+      "label": "3. Optimisation des Assets",
+      "file_type": "document",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L21",
+      "id": "docs_seo_spec_3_optimisation_des_assets",
+      "community": 6,
+      "norm_label": "3. optimisation des assets"
+    },
+    {
+      "label": "4. Fichiers Syst\u00e9matiques (G\u00e9n\u00e9r\u00e9s \u00e0 la compilation)",
+      "file_type": "document",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L33",
+      "id": "docs_seo_spec_4_fichiers_syst\u00e9matiques_g\u00e9n\u00e9r\u00e9s_\u00e0_la_compilation",
+      "community": 6,
+      "norm_label": "4. fichiers systematiques (generes a la compilation)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/api/contact.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "api_contact",
+      "target": "api_contact_onrequestoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/api/contact.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "api_contact",
+      "target": "api_contact_onrequestpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_engines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_engines",
+      "target": "package_engines_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_astro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_cf_typegen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_deploy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_astro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_astrojs_cloudflare",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_astrojs_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_wrangler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/layouts/Layout.astro",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "layouts_layout",
+      "target": "layouts_layout_personschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source": "pages_index",
+      "target": "layouts_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/projects/bati-axe.astro",
+      "source": "projects_bati_axe",
+      "target": "layouts_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/projects/vtc-hub.astro",
+      "source": "projects_vtc_hub",
+      "target": "layouts_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "pages_index",
+      "target": "astro_assets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "pages_index",
+      "target": "home_mike_projects_portfolio_src_assets_images_headshot_png",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "pages_index",
+      "target": "home_mike_projects_portfolio_src_assets_images_project_briquerouge_png",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "pages_index",
+      "target": "home_mike_projects_portfolio_src_assets_images_project_ecommerce_png",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "pages_index",
+      "target": "home_mike_projects_portfolio_src_assets_images_project_vtc_png",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_extends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "claude_claude_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_cloudflare_deployment_from_docs_cloudflare_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "claude_claude_md",
+      "target": "claude_seo_performance_rules_from_docs_seo_spec_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "product",
+      "target": "product_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_accessibility_inclusion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_anti_references",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_brand_personality",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_design_principles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_product_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRODUCT.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "product_product",
+      "target": "product_users",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_portfolio_d\u00e9veloppeur_front_end_wordpress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "readme_portfolio_d\u00e9veloppeur_front_end_wordpress",
+      "target": "readme_commandes_de_d\u00e9veloppement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "readme_portfolio_d\u00e9veloppeur_front_end_wordpress",
+      "target": "readme_performances_objectifs_seo_du_projet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "readme_portfolio_d\u00e9veloppeur_front_end_wordpress",
+      "target": "readme_profil_expertise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "readme_portfolio_d\u00e9veloppeur_front_end_wordpress",
+      "target": "readme_stack_technique_comp\u00e9tences",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "readme_stack_technique_comp\u00e9tences",
+      "target": "readme_comp\u00e9tences_secondaires_transverses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "readme_stack_technique_comp\u00e9tences",
+      "target": "readme_expertises_principales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_cloudflare",
+      "target": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "target": "docs_cloudflare_1_configuration_du_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "target": "docs_cloudflare_2_en_t\u00eates_http_public_headers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "target": "docs_cloudflare_3_redirections_public_redirects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "target": "docs_cloudflare_4_fonctions_serveur_cloudflare_pages_functions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "docs_cloudflare_configuration_d\u00e9ploiement_cloudflare_pages",
+      "target": "docs_cloudflare_5_cache_cloudflare_cdn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLOUDFLARE.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "docs_cloudflare_4_fonctions_serveur_cloudflare_pages_functions",
+      "target": "docs_cloudflare_variables_d_environnement_requises",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_project",
+      "target": "docs_project_projet_portfolio_astro_cloudflare",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_project_projet_portfolio_astro_cloudflare",
+      "target": "docs_project_stack_technique",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_project_projet_portfolio_astro_cloudflare",
+      "target": "docs_project_structure_du_projet_cible",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_project_projet_portfolio_astro_cloudflare",
+      "target": "docs_project_\u00e9tapes_de_d\u00e9veloppement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_seo_spec",
+      "target": "docs_seo_spec_sp\u00e9cifications_seo_performance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_seo_spec_sp\u00e9cifications_seo_performance",
+      "target": "docs_seo_spec_1_m\u00e9tadonn\u00e9es_balises_html",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_seo_spec_sp\u00e9cifications_seo_performance",
+      "target": "docs_seo_spec_2_performances_core_web_vitals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_seo_spec_sp\u00e9cifications_seo_performance",
+      "target": "docs_seo_spec_3_optimisation_des_assets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SEO-SPEC.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "docs_seo_spec_sp\u00e9cifications_seo_performance",
+      "target": "docs_seo_spec_4_fichiers_syst\u00e9matiques_g\u00e9n\u00e9r\u00e9s_\u00e0_la_compilation",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "3632c575b1addf6c5f546516f31e6959dbc1119b"
+}

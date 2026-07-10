@@ -1,0 +1,117 @@
+{
+  "astro.config.mjs": {
+    "mtime": 1783650569.8603306,
+    "ast_hash": "aba0d333c8bf83ddac1c19c11b31951b",
+    "semantic_hash": ""
+  },
+  "functions/api/contact.js": {
+    "mtime": 1779917484.8877108,
+    "ast_hash": "b0dc18d9c77bc975e45a78ba4b553a73",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1783650569.8703303,
+    "ast_hash": "411f09ac2ec3ee30d3da5f76c279ffe3",
+    "semantic_hash": ""
+  },
+  "src/env.d.ts": {
+    "mtime": 1779891345.1944587,
+    "ast_hash": "a34c63603f2fc704c29af63d4a960109",
+    "semantic_hash": ""
+  },
+  "src/layouts/Layout.astro": {
+    "mtime": 1783678741.936544,
+    "ast_hash": "6e7f84763d84794603f472959d209250",
+    "semantic_hash": ""
+  },
+  "src/pages/index.astro": {
+    "mtime": 1783678741.936544,
+    "ast_hash": "dab2c3856942a49b4fa768f1bca861eb",
+    "semantic_hash": ""
+  },
+  "src/pages/projects/bati-axe.astro": {
+    "mtime": 1783678741.936544,
+    "ast_hash": "474371c27da607e827d0972e64dabad0",
+    "semantic_hash": ""
+  },
+  "src/pages/projects/vtc-hub.astro": {
+    "mtime": 1783678741.936544,
+    "ast_hash": "fc468ee8164142c202d78906ee9124aa",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1783650569.8703303,
+    "ast_hash": "99978db168b43dc6099c54088e1f09a0",
+    "semantic_hash": ""
+  },
+  ".github/workflows/react-doctor.yml": {
+    "mtime": 1783650569.8603306,
+    "ast_hash": "c5fc1c65ca5f31909e8e70a1feab6559",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1779890288.1540363,
+    "ast_hash": "c22bd5840f2c01d7b4c187264cda1e04",
+    "semantic_hash": ""
+  },
+  "PRODUCT.md": {
+    "mtime": 1783636584.303137,
+    "ast_hash": "b463b6db88588bf7b7d147f1370bd498",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1779891597.3445618,
+    "ast_hash": "b354e29d6ef8cabbc7c146afbbf30c06",
+    "semantic_hash": ""
+  },
+  "docs/CLOUDFLARE.md": {
+    "mtime": 1779917615.3671532,
+    "ast_hash": "0eb175277aa883526852de555616579a",
+    "semantic_hash": ""
+  },
+  "docs/PROJECT.md": {
+    "mtime": 1779889987.1939266,
+    "ast_hash": "b60ddcebf8fe8f5c682e2f899f9aed65",
+    "semantic_hash": ""
+  },
+  "docs/SEO-SPEC.md": {
+    "mtime": 1779889998.4039302,
+    "ast_hash": "b60ca680841ebdbfa0502decc9190e7b",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1779805343.0,
+    "ast_hash": "8c13f40658976ea1dfb8ba37a8be0e8d",
+    "semantic_hash": ""
+  },
+  "src/assets/images/headshot.png": {
+    "mtime": 1783678741.936544,
+    "ast_hash": "49892b844871ab6626b4896a87795b8b",
+    "semantic_hash": ""
+  },
+  "src/assets/images/project-briquerouge.png": {
+    "mtime": 1783636584.363137,
+    "ast_hash": "22eb125cb30b65750cfe8f756d7737f5",
+    "semantic_hash": ""
+  },
+  "src/assets/images/project-ecommerce.png": {
+    "mtime": 1779893544.952864,
+    "ast_hash": "654193139013c9712eeac1d08f3d0a3e",
+    "semantic_hash": ""
+  },
+  "src/assets/images/project-langueturquoise.png": {
+    "mtime": 1783636584.313137,
+    "ast_hash": "331dc37ed2248772ab91d47f7e094a2d",
+    "semantic_hash": ""
+  },
+  "src/assets/images/project-vtc.png": {
+    "mtime": 1779893544.952864,
+    "ast_hash": "3131f4facf8ccdd987ce0f068b87be39",
+    "semantic_hash": ""
+  },
+  "src/assets/images/project-vtchub.png": {
+    "mtime": 1780005401.227321,
+    "ast_hash": "b3dd4fd50787f481c13566c8efcfe425",
+    "semantic_hash": ""
+  }
+}
