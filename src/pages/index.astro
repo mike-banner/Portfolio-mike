@@ -445,11 +445,6 @@ import headshotImg from '../assets/images/headshot.png';
   }
   .nav-links a:hover { color: var(--text-primary); }
 
-  @media (min-width: 768px) {
-    .nav-links { display: flex; }
-    .hamburger { display: none; }
-  }
-
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -463,6 +458,11 @@ import headshotImg from '../assets/images/headshot.png';
     cursor: pointer;
     padding: 0 10px;
     transition: border-color 0.2s;
+  }
+
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+    .hamburger { display: none; }
   }
   .hamburger:hover { border-color: var(--border-hover); }
   .hamburger span {
