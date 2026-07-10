@@ -32,38 +32,48 @@ import Layout from '../../layouts/Layout.astro';
       </header>
 
       <div class="cs-body">
-        <h2>System Architecture</h2>
-        <p>VTC HUB is not a single application, but an ecosystem of three distinct frontends connected to a centralized Supabase backend, deployed from a single Turborepo-managed monorepo.</p>
-        
-        <ul class="cs-list">
-          <li><strong>Driver App (Astro/React):</strong> Mobile-first PWA for drivers to manage trips, track earnings, and generate certified PDF invoices.</li>
-          <li><strong>Backoffice (Astro/React):</strong> Dispatch dashboard for fleet managers, featuring real-time availability and dynamic pricing algorithms.</li>
-          <li><strong>Superadmin:</strong> Internal tool for managing tenant subscriptions and platform health.</li>
-        </ul>
-
-        <h2>White-Label Frontend Factory</h2>
-        <p>A major architectural achievement of this project is its capability to dynamically provision <strong>thousands of independent driver websites</strong>. By leveraging Cloudflare for SaaS and edge routing, drivers can spawn their own personalized booking sites under their own custom domains. These sites are fully linked to their central backoffice in realtime, while being served from a single, highly-optimized frontend codebase.</p>
-
-        <h2>Technical Highlights</h2>
-        <p>The core challenge was <strong>multi-tenant data isolation</strong> without sacrificing performance. I utilized PostgreSQL's Row Level Security (RLS) tightly coupled with Supabase Auth to ensure that a driver in Tenant A cannot mathematically access dispatch data from Tenant B.</p>
-        
-        <p>For deployment, the monorepo pushes to Cloudflare Pages. A custom edge routing layer handles custom domains (Host Header routing), allowing fleet managers to run the SaaS under their own domain names.</p>
-        
-        <div class="cs-code-block">
-          <div class="code-header">
-            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
-            <span class="code-title">edge-router.ts</span>
+        <div class="architecture-grid">
+          <div class="arch-layer">
+            <h3>🌐 Frontend Layer</h3>
+            <p><strong>Astro 5 & React 19 Monorepo</strong></p>
+            <p>A unified codebase delivering three distinct applications. The <strong>Driver App</strong> is a mobile-first PWA for trip management and PDF invoice generation. The <strong>Backoffice</strong> provides real-time fleet dispatching, and the <strong>Superadmin</strong> handles tenant health and billing.</p>
+            
+            <h4>White-Label Engine</h4>
+            <p>Dynamically provisions thousands of independent driver booking websites. Each site is spawned instantly, fully customized, and connected to the central backoffice.</p>
           </div>
-          <div class="code-body">
-            <span class="kw">export default</span> {'{'}
-            <br>&nbsp;&nbsp;<span class="kw">async</span> <span class="fn">fetch</span>(request, env) {'{'}
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">const</span> url = <span class="kw">new</span> URL(request.url);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">const</span> tenant = <span class="kw">await</span> env.TENANTS.get(url.hostname);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">if</span> (!tenant) <span class="kw">return new</span> Response(<span class="str">"Not Found"</span>, {'{'} status: <span class="num">404</span> {'}'});
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="fn">rewriteRequest</span>(request, tenant);
-            <br>&nbsp;&nbsp;{'}'}
-            <br>{'}'}
+
+          <div class="arch-layer">
+            <h3>⚙️ Backend & Data Layer</h3>
+            <p><strong>Supabase & PostgreSQL</strong></p>
+            <p>A strictly typed, high-performance database layer managing complex booking state machines, surge pricing calculations, and immutable accounting ledgers.</p>
+            
+            <h4>Multi-Tenant RLS</h4>
+            <p>PostgreSQL Row Level Security guarantees absolute data isolation. A driver in Tenant A cannot mathematically query or access dispatch data belonging to Tenant B.</p>
+          </div>
+
+          <div class="arch-layer">
+            <h3>☁️ Cloud & Edge Layer</h3>
+            <p><strong>Cloudflare Pages & Workers</strong></p>
+            <p>The entire monorepo is continuously deployed to Cloudflare's global edge network, ensuring sub-50ms latency worldwide.</p>
+            
+            <h4>Host-Header Routing</h4>
+            <p>A custom Cloudflare Worker intercepts incoming requests and dynamically rewrites them based on the custom domain (Host header), seamlessly mapping drivers' domains to their white-label tenant instance.</p>
+            
+            <div class="cs-code-block" style="margin-top: 1rem;">
+              <div class="code-header">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+                <span class="code-title">edge-router.ts</span>
+              </div>
+              <div class="code-body">
+                <span class="kw">export default</span> {'{'}
+                <br>&nbsp;&nbsp;<span class="kw">async</span> <span class="fn">fetch</span>(req, env) {'{'}
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">const</span> url = <span class="kw">new</span> URL(req.url);
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">const</span> tenant = <span class="kw">await</span> env.KV.get(url.hostname);
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> tenant ? <span class="fn">rewrite</span>(req, tenant) : <span class="num">404</span>;
+                <br>&nbsp;&nbsp;{'}'}
+                <br>{'}'}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -108,9 +118,10 @@ import Layout from '../../layouts/Layout.astro';
   }
   .nav {
     display: flex;
-    align-items: center;
-    max-width: 800px;
+    width: 92%;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 1rem 0;
     padding: 1rem 1.25rem;
   }
   .logo {
@@ -129,7 +140,8 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 100vh;
   }
   .case-study-content {
-    max-width: 800px;
+    width: 92%;
+    max-width: 1400px;
     margin: 0 auto;
     background: var(--bg-surface);
     border: 1px solid var(--border);
@@ -301,5 +313,43 @@ import Layout from '../../layouts/Layout.astro';
     padding: 0.1rem 0.3rem;
     border-radius: 4px;
     color: #a6e3a1;
+  }
+  .architecture-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  @media (min-width: 900px) {
+    .architecture-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .arch-layer {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  .arch-layer h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+  .arch-layer h4 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .arch-layer p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  .arch-layer p + p {
+    margin-top: 1rem;
   }
 </style>

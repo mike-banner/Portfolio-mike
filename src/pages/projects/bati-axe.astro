@@ -32,37 +32,45 @@ import Layout from '../../layouts/Layout.astro';
       </header>
 
       <div class="cs-body">
-        <h2>Infrastructure as Code (IaC)</h2>
-        <p>Bâti-Axe goes beyond typical frontend development. The entire infrastructure—from Cloudflare DNS and Pages deployments to the Supabase PostgreSQL database—is defined immutably using <strong>Terraform</strong>. This guarantees a strictly reproducible environment where staging and production are mathematically identical.</p>
-
-        <div class="cs-code-block">
-          <div class="code-header">
-            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
-            <span class="code-title">terraform/main.tf</span>
+        <div class="architecture-grid">
+          <div class="arch-layer">
+            <h3>🌐 Frontend Layer</h3>
+            <p><strong>Nuxt 4 & Vue 3 (Server-Side Rendered)</strong></p>
+            <p>A highly interactive double-sided marketplace providing SEO-optimized landing pages for homeowners and a dynamic, gated dashboard for construction professionals.</p>
+            
+            <h4>Magic-Link Auth</h4>
+            <p>Passwordless authentication via Resend guarantees zero friction for less tech-savvy professionals, driving higher conversion rates on lead purchases.</p>
           </div>
-          <div class="code-body">
-            <span class="kw">module</span> <span class="str">"cloudflare_pages"</span> {'{'}
-            <br>&nbsp;&nbsp;<span class="kw">source</span> = <span class="str">"./modules/cloudflare"</span>
-            <br>&nbsp;&nbsp;project_name = <span class="str">"bati-axe-app"</span>
-            <br>&nbsp;&nbsp;environment  = <span class="kw">var</span>.env
-            <br>&nbsp;&nbsp;domain       = <span class="str">"bati-axe.fr"</span>
-            <br>{'}'}
-            <br>
-            <br><span class="kw">module</span> <span class="str">"supabase"</span> {'{'}
-            <br>&nbsp;&nbsp;<span class="kw">source</span> = <span class="str">"./modules/database"</span>
-            <br>&nbsp;&nbsp;enable_rls = <span class="num">true</span>
-            <br>{'}'}
+
+          <div class="arch-layer">
+            <h3>⚙️ Backend & Data Layer</h3>
+            <p><strong>Supabase & Stripe Webhooks</strong></p>
+            <p>The monetization engine is entirely serverless. Supabase Edge Functions intercept Stripe webhook events securely, instantly provisioning or revoking access to premium leads directly within the PostgreSQL database.</p>
+            
+            <h4>Storage Optimization</h4>
+            <p>Direct-to-R2 uploads handle massive portfolio images and legal documents, entirely bypassing Supabase's storage bandwidth limitations and reducing infrastructure costs.</p>
+          </div>
+
+          <div class="arch-layer">
+            <h3>☁️ Infrastructure Layer</h3>
+            <p><strong>Terraform (IaC)</strong></p>
+            <p>The entire platform is defined immutably using Terraform. From Cloudflare DNS and Pages deployments to the Supabase database configurations, staging and production are mathematically identical.</p>
+            
+            <div class="cs-code-block" style="margin-top: 1rem;">
+              <div class="code-header">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+                <span class="code-title">terraform/main.tf</span>
+              </div>
+              <div class="code-body">
+                <span class="kw">module</span> <span class="str">"cloudflare_pages"</span> {'{'}
+                <br>&nbsp;&nbsp;<span class="kw">source</span> = <span class="str">"./modules/cloudflare"</span>
+                <br>&nbsp;&nbsp;project_name = <span class="str">"bati-axe-app"</span>
+                <br>&nbsp;&nbsp;environment  = <span class="kw">var</span>.env
+                <br>{'}'}
+              </div>
+            </div>
           </div>
         </div>
-
-        <h2>Monetization & Stripe Integration</h2>
-        <p>The business model relies on a freemium system for homeowners and a subscription/lead-buying model for professionals. I integrated a secure Stripe pipeline leveraging Supabase Edge Functions as webhooks. This architecture securely processes payments, manages recurring subscriptions, and automatically provisions or revokes access to premium leads in the database without relying on a traditional heavy Node.js backend.</p>
-
-        <ul class="cs-list">
-          <li><strong>Magic-Link Auth:</strong> Passwordless login via Resend to reduce friction for less tech-savvy professionals.</li>
-          <li><strong>Storage Optimization:</strong> Direct-to-R2 uploads for massive portfolio images and legal documents to bypass Supabase storage limits and drastically reduce bandwidth costs.</li>
-          <li><strong>Server-side Nuxt:</strong> Leverage Nuxt 4 server API routes for secure operations.</li>
-        </ul>
 
         <h2 id="demo">Live Environments & Access</h2>
         <p>You can access the production environment directly below. Some features may require an account to view, but the main landing and professional directory are public.</p>
@@ -93,9 +101,10 @@ import Layout from '../../layouts/Layout.astro';
   }
   .nav {
     display: flex;
-    align-items: center;
-    max-width: 800px;
+    width: 92%;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 1rem 0;
     padding: 1rem 1.25rem;
   }
   .logo {
@@ -114,7 +123,8 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 100vh;
   }
   .case-study-content {
-    max-width: 800px;
+    width: 92%;
+    max-width: 1400px;
     margin: 0 auto;
     background: var(--bg-surface);
     border: 1px solid var(--border);
@@ -280,5 +290,43 @@ import Layout from '../../layouts/Layout.astro';
   }
   .demo-creds a:hover {
     text-decoration: underline;
+  }
+  .architecture-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  @media (min-width: 900px) {
+    .architecture-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .arch-layer {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  .arch-layer h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+  .arch-layer h4 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .arch-layer p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  .arch-layer p + p {
+    margin-top: 1rem;
   }
 </style>
