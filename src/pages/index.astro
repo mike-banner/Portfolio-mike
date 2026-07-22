@@ -183,7 +183,7 @@ import headshotImg from '../assets/images/headshot.png';
           <h3>Meliponini E-Commerce</h3>
           <p>Headless boutique synced via GraphQL with WooCommerce.</p>
           <ul class="tech-pills" aria-label="Technologies used">
-            <li>Astro</li><li>GraphQL</li><li>WooCommerce</li>
+            <li>Astro</li><li>React</li><li>GraphQL</li><li>WooCommerce</li><li>Cloudflare</li><li>VPS</li>
           </ul>
         </div>
       </article>
@@ -378,7 +378,7 @@ import headshotImg from '../assets/images/headshot.png';
           body: JSON.stringify(data),
         });
 
-        if (response.ok || response.status === 404) {
+        if (response.ok) {
           if (statusDiv) {
             statusDiv.className = 'form-status success';
             statusDiv.textContent = 'Message sent! I will get back to you shortly.';
