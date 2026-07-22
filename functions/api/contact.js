@@ -21,15 +21,14 @@ export async function onRequestPost({ request, env }) {
     const apiKey = env.RESEND_API_KEY;
     const toEmail = env.TO_EMAIL;
 
-    // Si les variables d'environnement ne sont pas configurées, on simule le succès en dev/test
+    // Si les variables d'environnement ne sont pas configurées, on retourne une erreur explicite
     if (!apiKey || !toEmail) {
-      console.warn("Variables RESEND_API_KEY ou TO_EMAIL manquantes. Simulation du succès.");
+      console.error("Variables RESEND_API_KEY ou TO_EMAIL manquantes. Impossible d'envoyer le mail.");
       return new Response(
         JSON.stringify({ 
-          success: true, 
-          message: "Mode simulation : configurez vos variables sur Cloudflare." 
+          error: "Configuration serveur incomplète (clés d'API manquantes)." 
         }),
-        { status: 200, headers: corsHeaders }
+        { status: 500, headers: corsHeaders }
       );
     }
 
